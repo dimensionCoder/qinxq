@@ -8,5 +8,6 @@
 </head>
 <body>
 
+<script type="text/javascript" src="${pageContext.request.contextPath}/statics/js/angular.min.js" />
 </body>
 </html>
