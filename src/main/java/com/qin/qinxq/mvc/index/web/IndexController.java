@@ -1,10 +1,10 @@
-package com.qin.qinxq.web.controller;
+package com.qin.qinxq.mvc.index.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * creat by qinxq on 2016/10/23 21:49
+ * Created by qinxq on 2016/10/23 21:49
  */
 @Controller
 public class IndexController {
