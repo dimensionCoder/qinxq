@@ -1,5 +1,6 @@
 package com.qin.qinxq.mvc.index.web;
 
+import com.qin.qinxq.mvc.basemvc.web.BaseController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -7,10 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created by qinxq on 2016/10/23 21:49
  */
 @Controller
-@RequestMapping(value = "index")
-public class IndexController {
-    @RequestMapping(value = "index")
-    public String toIndex(){
-        return "index";
+public class IndexController extends BaseController {
+    @RequestMapping(value = "login")
+    public String toLogin(){
+        return "login";
     }
 }
