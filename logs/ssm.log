@@ -7,3 +7,10 @@
 [INFO] [2016-10-25 14:52:07][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
 [INFO] [2016-10-25 14:52:08][LogTest]日志测试
 [INFO] [2016-10-25 14:52:08][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@5526edd1: startup date [Tue Oct 25 14:52:07 CST 2016]; root of context hierarchy
+[INFO] [2016-10-26 09:11:20][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from URL [file:/F:/qin/target/classes/spring-mybatis.xml]
+[INFO] [2016-10-26 09:11:21][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@715be530: startup date [Wed Oct 26 09:11:21 CST 2016]; root of context hierarchy
+[WARN] [2016-10-26 09:11:22][org.mybatis.spring.mapper.ClassPathMapperScanner]No MyBatis mapper was found in '[com.qin.qinxq.mvc/**/dao]' package. Please check your configuration.
+[INFO] [2016-10-26 09:11:22][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-10-26 09:11:22][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2016-10-26 09:11:22][LogTest]日志测试
+[INFO] [2016-10-26 09:11:22][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@715be530: startup date [Wed Oct 26 09:11:21 CST 2016]; root of context hierarchy
