@@ -1,7 +1,7 @@
 package com.qin.qinxq.entity.user;
 
 /**
- * creat by qinxq on 2016/10/23 19:41
+ * Created by qinxq on 2016/10/23 19:41
  */
 public class User {
     private String id;
