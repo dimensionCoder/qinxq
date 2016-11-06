@@ -23,5 +23,11 @@
         <li>
             <a href="${pageContext.request.contextPath}/welcome">欢迎页</a>
         </li>
+        <li>
+            <a href="${pageContext.request.contextPath}/article/index">文章</a>
+        </li>
+        <li>
+            <a href="${pageContext.request.contextPath}/video/index">视频</a>
+        </li>
     </ul>
 </div>
