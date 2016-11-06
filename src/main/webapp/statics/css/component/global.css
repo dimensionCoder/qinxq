@@ -1,0 +1,11 @@
+#global_menu_box{
+
+}
+#global_menu_box ul{
+    list-style: none;
+    overflow: hidden;
+}
+#navigation li{
+    float: left;
+    padding-right: 20px;
+}

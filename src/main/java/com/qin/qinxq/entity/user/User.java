@@ -1,13 +1,14 @@
 package com.qin.qinxq.entity.user;
 
+import com.qin.qinxq.entity.baseentity.Entity;
+
 /**
  * Created by qinxq on 2016/10/23 19:41
  */
-public class User {
+public class User extends Entity{
     private String id;
     private String username;
     private String password;
-    private String name;
 
     public String getId() {
         return id;
@@ -31,13 +32,5 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }

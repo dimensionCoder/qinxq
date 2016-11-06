@@ -3,7 +3,20 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.qin.qinxq.entity.user.User">
+    <sql id="table">
+        user
+    </sql>
+    <sql id="base_column">
+        id,
+        username,
+        password
+    </sql>
     <select id="queryAll" resultType="com.qin.qinxq.entity.user.User">
-        select * from  `user`
+        select <include refid="base_column"/>
+        from  <include refid="table"/>
     </select>
+    <delete id="delete" parameterType="com.qin.qinxq.entity.user.User">
+        delete from <include refid="table"/>
+        where id=#{id}
+    </delete>
 </mapper>

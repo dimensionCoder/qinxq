@@ -9,8 +9,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class IndexController extends BaseController {
+
     @RequestMapping(value = "login")
     public String toLogin(){
-        return "login";
+        return "login/login";
     }
+
+    @RequestMapping(value = "/")
+    public String toIndex() {
+        return "index/index";
+    }
+
+    @RequestMapping(value = "welcome")
+    public String welcome() {
+        return "welcome/index";
+    }
+
 }

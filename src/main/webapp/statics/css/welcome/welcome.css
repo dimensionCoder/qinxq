@@ -1,0 +1,7 @@
+@font-face {
+    font-family: agend_1;
+    src: url('../../fonts/Agend.ttf');
+}
+#title{
+    font-family: agend_1;
+}
