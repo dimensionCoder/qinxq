@@ -8,5 +8,8 @@ import java.util.List;
 public interface BaseDao<T> {
     int delete(T entity);
     List<T> queryAll();
-
+    int update(T entity);
+    List<T> select(T entity);
+    T selectOne(T entity);
+    int insert(T entity);
 }

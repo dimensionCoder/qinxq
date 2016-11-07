@@ -6,17 +6,14 @@ import com.qin.qinxq.entity.baseentity.Entity;
  * Created by qinxq on 2016/10/23 19:41
  */
 public class User extends Entity{
-    private String id;
+    /*用户名*/
     private String username;
+    /*密码*/
     private String password;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
+    /*昵称*/
+    private String nickname;
+    /*角色*/
+    private int realm;
 
     public String getUsername() {
         return username;

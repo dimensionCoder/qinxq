@@ -9,12 +9,32 @@
     <sql id="base_column">
         id,
         username,
-        password
+        password,
+        nickname,
+        realm
     </sql>
+    <insert id="insert" parameterType="com.qin.qinxq.entity.user.User">
+        insert into <include refid="table"/>
+        (<include refid="base_column"/>)
+        values(#{id},#{username},#{password},#{nickname},#{realm})
+    </insert>
     <select id="queryAll" resultType="com.qin.qinxq.entity.user.User">
         select <include refid="base_column"/>
         from  <include refid="table"/>
     </select>
+    <select id="select" resultType="com.qin.qinxq.entity.user.User" parameterType="com.qin.qinxq.entity.user.User">
+        select <include refid="base_column"/>
+        from  <include refid="table"/>
+    </select>
+    <select id="selectOne" resultType="com.qin.qinxq.entity.user.User" parameterType="com.qin.qinxq.entity.user.User">
+        select <include refid="base_column"/>
+        from  <include refid="table"/>
+    </select>
+    <update id="update" parameterType="com.qin.qinxq.entity.user.User">
+        update <include refid="table"/>
+        set nickname=#{nickname}
+        where id=#{id}
+    </update>
     <delete id="delete" parameterType="com.qin.qinxq.entity.user.User">
         delete from <include refid="table"/>
         where id=#{id}

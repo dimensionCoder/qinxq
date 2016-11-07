@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qin.qinxq.entity.realm.Realm">
+    <sql id="table">
+        realm
+    </sql>
+    <sql id="base_column">
+        id,
+        realmname
+    </sql>
+    <insert id="insert" parameterType="com.qin.qinxq.entity.realm.Realm">
+        insert into
+        <include refid="table"/>
+        (<include refid="base_column"/>)
+        values(#{id},#{realmname})
+    </insert>
+    <select id="queryAll" resultType="com.qin.qinxq.entity.realm.Realm">
+        select
+        <include refid="base_column"/>
+        from
+        <include refid="table"/>
+    </select>
+    <select id="select" resultType="com.qin.qinxq.entity.realm.Realm" parameterType="com.qin.qinxq.entity.realm.Realm">
+        select
+        <include refid="base_column"/>
+        from
+        <include refid="table"/>
+    </select>
+    <select id="selectOne" resultType="com.qin.qinxq.entity.realm.Realm" parameterType="com.qin.qinxq.entity.realm.Realm">
+        select
+        <include refid="base_column"/>
+        from
+        <include refid="table"/>
+    </select>
+    <update id="update" parameterType="com.qin.qinxq.entity.realm.Realm">
+        update
+        <include refid="table"/>
+        set nickname=#{nickname}
+        where id=#{id}
+    </update>
+    <delete id="delete" parameterType="com.qin.qinxq.entity.realm.Realm">
+        delete from
+        <include refid="table"/>
+        where id=#{id}
+    </delete>
+</mapper>

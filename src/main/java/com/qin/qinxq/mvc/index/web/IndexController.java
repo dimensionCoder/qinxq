@@ -12,7 +12,7 @@ public class IndexController extends BaseController {
 
     @RequestMapping(value = "login")
     public String toLogin(){
-        return "login/login";
+        return "login/index";
     }
 
     @RequestMapping(value = "/")
