@@ -13,30 +13,45 @@
         nickname,
         realm
     </sql>
+    <sql id="select_column">
+        id,
+        username,
+        nickname,
+        realm
+    </sql>
     <insert id="insert" parameterType="com.qin.qinxq.entity.user.User">
         insert into <include refid="table"/>
         (<include refid="base_column"/>)
         values(#{id},#{username},#{password},#{nickname},#{realm})
     </insert>
     <select id="queryAll" resultType="com.qin.qinxq.entity.user.User">
-        select <include refid="base_column"/>
+        select <include refid="select_column"/>
         from  <include refid="table"/>
     </select>
     <select id="select" resultType="com.qin.qinxq.entity.user.User" parameterType="com.qin.qinxq.entity.user.User">
-        select <include refid="base_column"/>
+        select <include refid="select_column"/>
         from  <include refid="table"/>
     </select>
     <select id="selectOne" resultType="com.qin.qinxq.entity.user.User" parameterType="com.qin.qinxq.entity.user.User">
-        select <include refid="base_column"/>
+        select <include refid="select_column"/>
         from  <include refid="table"/>
     </select>
     <update id="update" parameterType="com.qin.qinxq.entity.user.User">
         update <include refid="table"/>
-        set nickname=#{nickname}
+        set
+        <if test="nickname != null">nickname=#{nickname}</if>
+        <if test="password != null">password=#{password}</if>
         where id=#{id}
     </update>
     <delete id="delete" parameterType="com.qin.qinxq.entity.user.User">
         delete from <include refid="table"/>
         where id=#{id}
     </delete>
+
+    <!--根据账号密码查询一个用户-->
+    <select id="login" resultType="com.qin.qinxq.entity.user.User" parameterType="com.qin.qinxq.entity.user.User">
+        select <include refid="select_column"/>
+        from  <include refid="table"/>
+        where username=#{username} and password=#{password}
+    </select>
 </mapper>

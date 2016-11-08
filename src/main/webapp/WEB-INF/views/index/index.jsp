@@ -7,18 +7,7 @@
 <jsp:include page="../component/globalMenu.jsp"/>
 123123
 12
-32
-1321
-3
-12
-3
-12
-3
-12
-3
-123
-21
-3
+
 <div id="content" ng-app="indexApp" ng-controller="indexCtrl">
     <p ng-init="test()"></p>
 </div>

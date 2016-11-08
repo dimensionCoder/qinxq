@@ -17,7 +17,7 @@ import java.util.List;
  */
 public abstract class BaseDaoImpl<T extends Entity> implements BaseDao<T> {
     @Resource
-    private SqlSessionTemplate sqlSessionTemplate;
+    protected SqlSessionTemplate sqlSessionTemplate;
 
     public int delete(T entity) {
         return sqlSessionTemplate.delete(getSqlName("delete"),entity);
@@ -41,7 +41,7 @@ public abstract class BaseDaoImpl<T extends Entity> implements BaseDao<T> {
 
     public int insert(T entity) {
         entity.setId(UUID.getOne());
-        return sqlSessionTemplate.insert("insert",entity);
+        return sqlSessionTemplate.insert(getSqlName("insert"),entity);
     }
 
     /**

@@ -44,4 +44,13 @@
     <servlet-name>SpringMVC</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+
+  <filter>
+    <filter-name>shiroFilter</filter-name>
+    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>shiroFilter</filter-name>
+    <url-pattern>/*123</url-pattern>
+  </filter-mapping>
 </web-app>

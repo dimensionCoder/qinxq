@@ -6,4 +6,5 @@ package com.qin.qinxq.global;
 public class Config {
     public static final String MYABTIS_SPLITOR=".";
     public static final int PACKAGE_DEPTH=3;
+    public static final int MD5_FOR_PASSWORD=10;
 }

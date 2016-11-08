@@ -15,6 +15,13 @@ public class User extends Entity{
     /*角色*/
     private int realm;
 
+    public User(){}
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
     public String getUsername() {
         return username;
     }
